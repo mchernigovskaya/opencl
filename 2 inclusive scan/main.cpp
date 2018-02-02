@@ -129,10 +129,8 @@ int main() {
         program.build(devices, ("-D BLOCK_SIZE=" + std::to_string(BLOCK_SIZE)).c_str());
 
         std::vector<elem_type> input = read_input();
-
-        const size_t n = input.size();
+	size_t n = input.size();
         input.resize(BLOCK_SIZE * ((n + BLOCK_SIZE - 1) / BLOCK_SIZE));
-
         std::vector <elem_type> output = inclusive_scan(context, queue, program, input);
         write_output(output, n);
 
