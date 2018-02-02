@@ -11,7 +11,7 @@
 #include <iterator>
 #include <math.h>
 
-typedef float elem_type;
+typedef double elem_type;
 
 void generate_input(size_t n, size_t m){
     std::ofstream out("input.txt");

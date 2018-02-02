@@ -1,4 +1,4 @@
-typedef float elem_type;
+typedef double elem_type;
 
 __kernel void convolution(__global float * A,
                           __global float * B,
